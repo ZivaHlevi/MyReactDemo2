@@ -1,0 +1,59 @@
+.BookCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    max-width: 300px;
+    margin: 16px;
+
+}
+
+.BookCard p {
+    color: blue;
+    background-color: #fff;
+}
+
+
+/* Styling for the buttons container */
+.BookCard .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+/* Styling for the delete button */
+.BookCard .deleteButton {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    /* Red color for delete button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for the delete button */
+.BookCard .deleteButton:hover {
+    background-color: #c82333;
+    /* Darker shade of red on hover */
+}
+
+/* Styling for the edit button */
+.BookCard .editButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    /* Blue color for edit button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for the edit button */
+.BookCard .editButton:hover {
+    background-color: #0056b3;
+    /* Darker shade of blue on hover */
+}

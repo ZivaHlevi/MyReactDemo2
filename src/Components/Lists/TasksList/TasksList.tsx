@@ -3,7 +3,8 @@ import "./TasksList.css";
 import axios from "axios";
 import TaskCard from "../../Cards/TaskCard/TaskCard";
 import { TaskModel } from "../../../Models/TaskModel";
-import urlService from "../../../Services/UrlService";
+import urlService from "../../../Services/GlobalService/UrlService";
+import notifyService from "../../../Services/GlobalService/NotificationService";
 
 
 function TasksList(): JSX.Element {
@@ -13,7 +14,9 @@ function TasksList(): JSX.Element {
         .then((res)=>{
             console.log(res.data);
             setTasks(res.data);
-        }).catch((err)=>{console.log(err)});
+            notifyService.success("Yea Yea!! it success ")
+        }).catch((err)=>{console.log(err);
+        notifyService.error("Oh...not succeed")});
 
     },[]);
     return (

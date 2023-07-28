@@ -9,16 +9,17 @@ class NotificationService{
 
     public error(msg: any) {
         //const str = JSON.stringify(msg);
-        toast.error(this.msgFormatter(msg));
+        toast.error(msg);
+        // (this.msgFormatter(msg));
     }
 
-    public msgFormatter(msg: any): string {
-        const str = msg as AxiosError;
-        if (str?.response?.data) {
-            return str?.response?.data as string;
-        }
-        return "Something went wrong!!!"
-    }
+    // public msgFormatter(msg: any): string {
+    //     const str = msg as AxiosError;
+    //     if (str?.response?.data) {
+    //         return str?.response?.data as string;
+    //     }
+    //     return "Something went wrong!!!"
+    // }
 }
 
 const notifyService = new NotificationService();
